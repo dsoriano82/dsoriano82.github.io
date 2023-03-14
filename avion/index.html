@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NMViajes</title>
+    <meta name="description" content="...">
+    <link rel="icon" href="img/favicon.ico">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <style>
+      /* NMviajes font*/
+      @font-face{font-family:"NMviajes";src:url("fonts/nmviajes.eot");src:url("fonts/nmviajes.eot#iefix")format("embedded-opentype"),url("fonts/nmviajes.woff")format("woff"),url("fonts/nmviajes.ttf")format("truetype"),url("fonts/nmviajes.svg")format("svg");font-weight:normal;font-style:normal}[class^="nmviajes-"]:before,[class*="nmviajes-"]:before,[class^="nmviajes-"]:after,[class*="nmviajes-"]:after{font-family:NMviajes;font-style:normal}.nmviajes-call:before{content:"\e000"}.nmviajes-hotel:before{content:"\e001"}.nmviajes-auto:before{content:"\e002"}.nmviajes-check:before{content:"\e003"}.nmviajes-up:before{content:"\e004"}.nmviajes-fbook1:before{content:"\e005"}.nmviajes-fbook2:before{content:"\e006"}.nmviajes-home:before{content:"\e007"}.nmviajes-menu:before{content:"\e008"}.nmviajes-secure:before{content:"\e009"}.nmviajes-gplus:before{content:"\e00a"}.nmviajes-luggage1:before{content:"\e00b"}.nmviajes-play:before{content:"\e00c"}.nmviajes-aereo1:before{content:"\e00d"}.nmviajes-ticket2:before{content:"\e00e"}.nmviajes-luggage2:before{content:"\e00f"}.nmviajes-ticket1:before{content:"\e010"}.nmviajes-youtube:before{content:"\e011"}
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="css/preload.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/slidebars.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+
+</head>
+<body>
+
+  <div class="sb-slidebar sb-left sb-style-push" >
+    <header>
+      <div class="logo" class="max-img">
+        <img src="img/nmviajes-logo.png">
+      </div>
+      <div class="banner">
+        <img src="img/image.jpg">
+      </div>
+      <div class="nav">
+        <nav>
+          <ul>
+            <li>
+              <a href="#" class="nmviajes-home">NMviajes.com</a>
+            </li>
+            <li>
+              <a href="#vuelos" class="flights nmviajes-aereo1">Ofertas de Vuelos</a>
+            </li>
+            <li>
+              <a href="#paquetes" class="packs nmviajes-luggage2">Ofertas de Paquetes</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <div class="menu-desk hidden-xs">
+    <header>
+      <div class="logo" class="max-img">
+        <img src="img/nmviajes-logo.png">
+      </div>
+      <div class="banner">
+        <img src="img/image.jpg">
+      </div>
+      <div class="nav">
+        <nav>
+          <ul>
+            <li>
+              <a href="#" class="nmviajes-home">NMviajes.com</a>
+            </li>
+            <li>
+              <a href="#vuelos" class="flights nmviajes-aereo1">Ofertas de Vuelos</a>
+            </li>
+            <li>
+              <a href="#paquetes" class="packs nmviajes-luggage2">Ofertas de Paquetes</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+  
+  <div id="loader-wrapper">
+    <div id="logo-load">
+      <img src="img/nmviajes-logo.png">      
+    </div>
+    <div id="loader">
+        
+    </div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>
+
+  <div class="sb-slide visible-xs menu-fix">
+    <div class="container-fluid">
+      <header>
+        <nav class="movil">
+          <span class="nmviajes-menu sb-toggle-left"></span>
+        </nav>
+        <a href="#" class="brand"><img src="img/logo.jpg"></a>
+      </header>
+    </div>
+  </div>
+
+  <div class="sb-menu" id="sb-site">
+
+    <div class="container visible-xs">
+      <img src="img/image2.jpg" class="banner2 max-img">
+    </div>
+
+    <div class="container-fluid">
+
+      <div class="row text-center">
+
+        <div class="col-xs-12">
+          <div id="section2" class="section2">
+
+            <div class="he">
+                <ul class="ca">
+                  <li><div>Vuelos</div></li>
+                  <li class="filter-2" data-filter="all"><a href="#">Todo</a></li>
+                  <li class="filter-2" data-filter=".nac"><a href="#">Nacional</a></li>
+                  <li class="filter-2" data-filter=".int"><a href="#">Internacional</a></li>
+                </ul>
+            </div>
+
+            <div class="row" id="flights">
+                <div class="col-sm-6 col-md-4 col-lg-2 mix nac">
+                  <a href="#">
+                    <div class="thumbnail">
+                      <div class="triangle nmviajes-aereo1"><img src="img/flag.png"></div>
+                      <img src="img/pucallpa.jpg" alt="Thumbnail Image 1" class="img-responsive">
+                      <div class="caption">
+                        <h3>Pucallpa</h3>
+                        <div class="bloq1">
+                            <span class="bfore">antes</span>
+                            <span class="price">$ 9999 o S/ 9999</span>
+                          </div>
+                      </div>
+                      <div class="mask"></div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mix nac">
+                  <a href="#">
+                    <div class="thumbnail">
+                      <div class="triangle nmviajes-aereo1"><img src="img/flag.png"></div>
+
+                      <img src="img/piura.jpg" alt="Thumbnail Image 1" class="img-responsive">
+                      <div class="caption">
+                        <h3>Piura</h3>
+                        <div class="bloq1">
+                            <span class="bfore">antes</span>
+                            <span class="price">$ 9999 o S/ 9999</span>
+                          </div>
+                      </div>
+                      <div class="mask"></div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mix nac">
+                  <a href="#">
+                    <div class="thumbnail">
+                      <div class="triangle nmviajes-aereo1"><img src="img/flag.png"></div>
+
+                      <img src="img/puerto-maldonado.jpg" alt="Thumbnail Image 1" class="img-responsive">
+                      <div class="caption">
+                        <h3>P. Maldonado</h3>
+                        <div class="bloq1">
+                            <span class="bfore">antes</span>
+                            <span class="price">$ 9999 o S/ 9999</span>
+                          </div>
+                      </div>
+                      <div class="mask"></div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mix nac">
+                  <a href="#">
+                    <div class="thumbnail">
+                      <div class="triangle nmviajes-aereo1"><img src="img/flag.png"></div>
+
+                      <img src="img/trujillo.jpg" alt="Thumbnail Image 1" class="img-responsive">
+                      <div class="caption">
+                        <h3>Trujillo</h3>
+                        <div class="bloq1">
+                            <span class="bfore">antes</span>
+                            <span class="price">$ 9999 o S/ 9999</span>
+                          </div>
+                      </div>
+                      <div class="mask"></div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mix nac">
+                  <a href="#">
+                    <div class="thumbnail">
+                      <div class="triangle nmviajes-aereo1"><img src="img/flag.png"></div>
+
+                      <img src="img/tarapoto.jpg" alt="Thumbnail Image 1" class="img-responsive">
+                      <div class="caption">
+                        <h3>Tarapoto</h3>
+                        <div class="bloq1">
+                            <span class="bfore">antes</span>
+                            <span class="price">$ 9999 o S/ 9999</span>
+                          </div>
+                      </div>
+                      <div class="mask"></div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mix nac">
+                  <a href="#">
+                    <div class="thumbnail">
+                      <div class="triangle nmviajes-aereo1"><img src="img/flag.png"></div>
+
+                      <img src="img/talara.jpg" alt="Thumbnail Image 1" class="img-responsive">
+                      <div class="caption">
+                        <h3>Talara</h3>
+                        <div class="bloq1">
+                            <span class="bfore">antes</span>
+                            <span class="price">$ 9999 o S/ 9999</span>
+                          </div>
+                      </div>
+                      <div class="mask"></div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mix int">
+                  <a href="#">
+                    <div class="thumbnail">
+                      <div class="triangle nmviajes-aereo1"><img src="img/flag.png"></div>
+
+                      <img src="img/tacna.jpg" alt="Thumbnail Image 1" class="img-responsive">
+                      <div class="caption">
+                        <h3>Tacna</h3>
+                        <div class="bloq1">
+                            <span class="bfore">antes</span>
+                            <span class="price">$ 9999 o S/ 9999</span>
+                          </div>
+                      </div>
+                      <div class="mask"></div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mix int">
+                  <a href="#">
+                    <div class="thumbnail">
+                      <div class="triangle nmviajes-aereo1"><img src="img/flag.png"></div>
+
+                      <img src="img/tumbes.jpg" alt="Thumbnail Image 1" class="img-responsive">
+                      <div class="caption">
+                        <h3>Tumbes</h3>
+                        <div class="bloq1">
+                            <span class="bfore">antes</span>
+                            <span class="price">$ 9999 o S/ 9999</span>
+                          </div>
+                      </div>
+                      <div class="mask"></div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mix int">
+                  <a href="#">
+                    <div class="thumbnail">
+                      <div class="triangle nmviajes-aereo1"><img src="img/flag.png"></div>
+
+                      <img src="img/tarapoto.jpg" alt="Thumbnail Image 1" class="img-responsive">
+                      <div class="caption">
+                        <h3>Tarapoto</h3>
+                        <div class="bloq1">
+                            <span class="bfore">antes</span>
+                            <span class="price">$ 9999 o S/ 9999</span>
+                          </div>
+                      </div>
+                      <div class="mask"></div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mix int">
+                  <a href="#">
+                    <div class="thumbnail">
+                      <div class="triangle nmviajes-aereo1"><img src="img/flag.png"></div>
+
+                      <img src="img/talara.jpg" alt="Thumbnail Image 1" class="img-responsive">
+                      <div class="caption">
+                        <h3>Talara</h3>
+                        <div class="bloq1">
+                            <span class="bfore">antes</span>
+                            <span class="price">$ 9999 o S/ 9999</span>
+                          </div>
+                      </div>
+                      <div class="mask"></div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mix int">
+                  <a href="#">
+                    <div class="thumbnail">
+                      <div class="triangle nmviajes-aereo1"><img src="img/flag.png"></div>
+
+                      <img src="img/tacna.jpg" alt="Thumbnail Image 1" class="img-responsive">
+                      <div class="caption">
+                        <h3>Tacna</h3>
+                        <div class="bloq1">
+                            <span class="bfore">antes</span>
+                            <span class="price">$ 9999 o S/ 9999</span>
+                          </div>
+                      </div>
+                      <div class="mask"></div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mix int">
+                  <a href="#">
+                    <div class="thumbnail">
+                      <div class="triangle nmviajes-aereo1"><img src="img/flag.png"></div>
+
+                      <img src="img/tumbes.jpg" alt="Thumbnail Image 1" class="img-responsive">
+                      <div class="caption">
+                        <h3>Tumbes</h3>
+                        <div class="bloq1">
+                            <span class="bfore">antes</span>
+                            <span class="price">$ 9999 o S/ 9999</span>
+                          </div>
+                      </div>
+                      <div class="mask"></div>
+                    </div>
+                  </a>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12">
+          <div id="section1" class="section1">
+
+            <div class="he">
+                <ul class="ca">
+                  <li><div>Paquetes</div></li>
+                  <li class="filter-1" data-filter="all"><a href="#">Todo</a></li>
+                  <li class="filter-1" data-filter=".nac"><a href="#">Nacional</a></li>
+                  <li class="filter-1" data-filter=".int"><a href="#">Internacional</a></li>
+                </ul>
+            </div>
+
+            <div class="row" id="packs">
+                <div class="col-sm-6 col-md-4 col-lg-2 mix int">
+                  <a href="#">
+                    <div class="thumbnail">
+                      <div class="triangle nmviajes-luggage2"><img src="img/flag.png"></div>
+                      <img src="img/ayacucho.jpg" alt="Thumbnail Image 1" class="img-responsive">
+                      <div class="caption">
+                        <h3>Ayacucho 4D/3N</h3>
+                        <div class="bloq1">
+                          <span class="bfore">antes</span>
+                          <span class="price">$ 9999 o S/ 9999</span>
+                        </div>
+                      </div>
+                      <div class="mask"></div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mix nac">
+                  <a href="#">
+                    <div class="thumbnail">
+                      <div class="triangle nmviajes-luggage2"><img src="img/flag.png"></div>
+
+                      <img src="img/arequipa.jpg" alt="Thumbnail Image 1" class="img-responsive">
+                      <div class="caption">
+                        <h3>Arequipa 5D/4N</h3>
+                        <div class="bloq1">
+                            <span class="bfore">antes</span>
+                            <span class="price">$ 9999 o S/ 9999</span>
+                          </div>
+                      </div>
+                      <div class="mask"></div>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- div class="col-sm-6 col-md-4 col-lg-2 mix int">
+                  <a href="#">
+                    <div class="thumbnail">
+                      <div class="triangle nmviajes-luggage2"><img src="img/flag.png"></div>
+
+                      <img src="img/cajamarca.jpg" alt="Thumbnail Image 1" class="img-responsive">
+                      <div class="caption">
+                        <h3>Cajamarca 3D/2N</h3>
+                        <div class="bloq1">
+                            <span class="bfore">antes</span>
+                            <span class="price">$ 9999 o S/ 9999</span>
+                          </div>
+                      </div>
+                      <div class="mask"></div>
+                    </div>
+                  </a>
+                </div -->
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mix nac">
+                  <a href="#">
+                    <div class="thumbnail">
+                      <div class="triangle nmviajes-luggage2"><img src="img/flag.png"></div>
+
+                      <img src="img/chiclayo.jpg" alt="Thumbnail Image 1" class="img-responsive">
+                      <div class="caption">
+                        <h3>Chiclayo 3D/2N</h3>
+                        <div class="bloq1">
+                            <span class="bfore">antes</span>
+                            <span class="price">$ 9999 o S/ 9999</span>
+                          </div>
+                      </div>
+                      <div class="mask"></div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mix nac">
+                  <a href="#">
+                    <div class="thumbnail">
+                      <div class="triangle nmviajes-luggage2"><img src="img/flag.png"></div>
+
+                      <img src="img/cusco.jpg" alt="Thumbnail Image 1" class="img-responsive">
+                      <div class="caption">
+                        <h3>Cuzco 4D/3N</h3>
+                        <div class="bloq1">
+                            <span class="bfore">antes</span>
+                            <span class="price">$ 9999 o S/ 9999</span>
+                          </div>
+                      </div>
+                      <div class="mask"></div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mix nac">
+                  <a href="#">
+                    <div class="thumbnail">
+                      <div class="triangle nmviajes-luggage2"><img src="img/flag.png"></div>
+
+                      <img src="img/iquitos.jpg" alt="Thumbnail Image 1" class="img-responsive">
+                      <div class="caption">
+                        <h3>Iquitos 5D/4N</h3>
+                        <div class="bloq1">
+                            <span class="bfore">antes</span>
+                            <span class="price">$ 9999 o S/ 9999</span>
+                          </div>
+                      </div>
+                      <div class="mask"></div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mix int">
+                  <a href="#">
+                    <div class="thumbnail">
+                      <div class="triangle nmviajes-luggage2"><img src="img/flag.png"></div>
+
+                      <img src="img/juliaca.jpg" alt="Thumbnail Image 1" class="img-responsive">
+                      <div class="caption">
+                        <h3>Cancún 4D/3N</h3>
+                        <div class="bloq1">
+                            <span class="bfore">antes</span>
+                            <span class="price">$ 9999 o S/ 9999</span>
+                          </div>
+                      </div>
+                      <div class="mask"></div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mix int">
+                  <a href="#">
+                    <div class="thumbnail">
+                      <div class="triangle nmviajes-luggage2"><img src="img/flag.png"></div>
+
+                      <img src="img/mancora.jpg" alt="Thumbnail Image 1" class="img-responsive">
+                      <div class="caption">
+                        <h3>P. Cana 4D/3N</h3>
+                        <div class="bloq1">
+                            <span class="bfore">antes</span>
+                            <span class="price">$ 9999 o S/ 9999</span>
+                          </div>
+                      </div>
+                      <div class="mask"></div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mix int">
+                  <a href="#">
+                    <div class="thumbnail">
+                      <div class="triangle nmviajes-luggage2"><img src="img/flag.png"></div>
+
+                      <img src="img/ayacucho.jpg" alt="Thumbnail Image 1" class="img-responsive">
+                      <div class="caption">
+                        <h3>P. Vallarta 4D/3N</h3>
+                        <div class="bloq1">
+                          <span class="bfore">antes</span>
+                          <span class="price">$ 9999 o S/ 9999</span>
+                        </div>
+                      </div>
+                      <div class="mask"></div>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- div class="col-sm-6 col-md-4 col-lg-2 mix nac">
+                  <a href="#">
+                    <div class="thumbnail">
+                      <div class="triangle nmviajes-luggage2"><img src="img/flag.png"></div>
+
+                      <img src="img/arequipa.jpg" alt="Thumbnail Image 1" class="img-responsive">
+                      <div class="caption">
+                        <h3>Los Ángeles 5D/4N</h3>
+                        <div class="bloq1">
+                            <span class="bfore">antes</span>
+                            <span class="price">$ 9999 o S/ 9999</span>
+                          </div>
+                      </div>
+                      <div class="mask"></div>
+                    </div>
+                  </a>
+                </div -->
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mix int">
+                  <a href="#">
+                    <div class="thumbnail">
+                      <div class="triangle nmviajes-luggage2"><img src="img/flag.png"></div>
+
+                      <img src="img/cajamarca.jpg" alt="Thumbnail Image 1" class="img-responsive">
+                      <div class="caption">
+                        <h3>Panamá 3D/2N</h3>
+                        <div class="bloq1">
+                            <span class="bfore">antes</span>
+                            <span class="price">$ 9999 o S/ 9999</span>
+                          </div>
+                      </div>
+                      <div class="mask"></div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-2 mix nac">
+                  <a href="#">
+                    <div class="thumbnail">
+                      <div class="triangle nmviajes-luggage2"><img src="img/flag.png"></div>
+
+                      <img src="img/chiclayo.jpg" alt="Thumbnail Image 1" class="img-responsive">
+                      <div class="caption">
+                        <h3>R. Maya 3D/2N</h3>
+                        <div class="bloq1">
+                            <span class="bfore">antes</span>
+                            <span class="price">$ 9999 o S/ 9999</span>
+                          </div>
+                      </div>
+                      <div class="mask"></div>
+                    </div>
+                  </a>
+                </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    
+    </div>
+
+    <footer class="text-center">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <p>Vuelos:<br>Tarifas de reserva y compra inmediata, aplican restricciones en fechas de viaje. Tarifas sujetas a cambio y disponibilidad, no aplican para grupos, no permiten cambios, no son endosables ni reembolsables. Paquetes con salidas confirmadas, aplican para las fechas indicadas, hasta agotar stock. Precios no incluyen gasto administrativo. T.C. referencial S/. 3.40 al 06/07/2016 (Sujeto a variación, el precio final en nuevos soles se determinara de acuerdo al artículo 1237 del código civil)<br>Paquetes:<br>T.C. referencial S/. 3.40 al 21 de junio de 2016 (Sujeto a variación - El precio final en nuevos soles se determinará de acuerdo al artículo 1237 del Código Civil). Todos los precios publicados están expresados en nuevos soles y dólares americanos. Los paquetes de viajes son por persona en base a habitación doble, es decir mínimo 2 personas viajando juntas y compartiendo el servicio para poder aplicar las promociones. Los precios incluyen los impuestos y cargos obligatorios para la emisión de los boletos según las condiciones vigentes al 21 de junio de 2016 (IGV, queue de seguridad, impuesto de arribo DY e impuesto del país si fuera obligatorio). Fotos de los destinos son referenciales. Stock 2 paquetes dobles por destino. Todos los paquetes internacionales y nacionales son válidos para comprar los días 22, 23 y 24 de junio de 2016. Horarios sujetos a variación de la propia línea aérea. Todos los precios son sólo para individuales no aplican para grupos. Todos los paquetes internacionales y nacionales no permiten cambios, son no reembolsables, no endosables, ni transferibles y no incluyen gastos administrativos. Todos los paquetes nacionales e internacionales son con salidas confirmadas, aplican para las fechas indicadas, previo pago total no rembolsable. Anulaciones y/o cancelaciones se penalizará al 100% del pago total, los boletos y vouchers serán entregados 48 horas antes de la fecha de salida. PAQUETES NACIONALES: T.C. referencial S/. 3.40 al 05 de julio del 2016 (Sujeto a variación - El precio final en nuevos soles se determinará de acuerdo al artículo 1237 del Código Civil). Los precios están expresados en nuevos soles y dólares americanos, son por persona en base a habitación doble (mínimo 2 personas). No válido para grupos. Incluyen los impuestos y cargos obligatorios para la emisión de los boletos según los vigentes al 05 de julio del 2016 (IGV, queue de seguridad, impuesto de arribo DY e impuesto del país si fuera obligatorio). Horarios sujetos a variación de la propia línea aérea. No rembolsables, no endosables ni transferibles. Stock 04 paquetes dobles. Aplica sólo para pagos en efectivo. NO INCLUYE GASTOS ADMINISTRATIVOS. Paquetes válidos para comprar desde el día 06 al 08 de julio y/o agotar stock. Chiclayo y Arequipa no incluyen traslados. Arequipa no incluye el traslado de  salida hotel / aeropuerto. Paquetes  solo para peruanos con DNI  y/o residentes con carnet de extranjería .Paquetes con salidas confirmadas, aplican para las fechas indicadas, previo pago total no rembolsable. Anulaciones y/o cancelaciones se penalizará al 100% del pago total, los boletos y vouchers serán entregados 48 horas antes de la fecha de salida, las salidas confirmadas nacionales aplica solo para peruanos o residentes en Perú. Los traslados son en servicio regular.<br>Nuevo Mundo Viajes sólo actúa como intermediario entre los proveedores locales e internacionales y el usuario, es responsable únicamente por la organización de los tours y boletos aéreos adquiridos. El usuario no puede imputarnos responsabilidad por causas que están fuera de nuestro alcance. No somos responsables del perjuicio o retraso alguno derivado de circunstancias ajenas a nuestro control (ya sean causas fortuitas, de fuerza mayor y a cualquier pérdida, daño, accidente o alguna otra irregularidad causada al usuario por hecho de tercero o a la imprudencia del propio usuario afectado). Cualquier reclamo del usuario respecto a los servicios deberá registrarlo directamente con el proveedor en destino. En nuestra condición de intermediarios gestionaremos su tramitación hasta la respuesta del proveedor, agotando la reconsideración de ser necesario. En el caso de la línea aérea el reclamo solo es aceptado para ser procesado si el usuario lo tramita directamente con ellos.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
+  <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+
+        $('#packs').mixItUp({
+            selectors: {
+              filter: '.filter-1'
+            },
+            animation: {
+              duration: 400,
+              effects: 'fade translateZ(-360px) stagger(34ms)',
+              easing: 'ease'
+            }
+         });
+
+        $('#flights').mixItUp({
+            selectors: {
+              filter: '.filter-2'
+            },
+            animation: {
+              duration: 400,
+              effects: 'fade translateZ(-360px) stagger(34ms)',
+              easing: 'ease'
+            }
+        });
+      
+    });
+  </script>
+
+  <script type="text/javascript" src="js/slidebars.js"></script>
+
+  <script type="text/javascript" src="js/main.js"></script>
+
+  <script type="text/javascript">
+    WebFontConfig = {
+      google: { families: [ 'Roboto:400,300,500:latin' ] }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  </script>
+
+  <script type="text/javascript">
+    (function($) {
+      $(document).ready(function() {
+        $.slidebars({
+          siteClose: true,
+          disableOver: 767,
+          hideControlClasses: false,
+          scrollLock: true
+        });
+      });
+    }) (jQuery);
+  </script>
+
+  <script type="text/javascript">
+    $('.flights').click(function (e) {
+        $('html, body').animate({
+            scrollTop: $('#section2').offset().top - 30
+        }, 'slow');
+    });
+    $('.packs').click(function (e) {
+        $('html, body').animate({
+            scrollTop: $('#section1').offset().top - 30
+        }, 'slow');
+    });
+  </script>
+
+  
+</body>
+</html>

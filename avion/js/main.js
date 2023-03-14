@@ -1,0 +1,9 @@
+$(document).ready(function () {
+  'use strict';
+ 
+	setTimeout(function(){
+		$('body').addClass('loaded');
+		$('h1').css('color','#222222');
+	}, 2000)
+
+});

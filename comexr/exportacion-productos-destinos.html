@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta name="description" content="ComexPerú es el gremio privado que agrupa a las principales empresas vinculadas al Comercio Exterior en el Perú.">
+    <meta name="author" content="ComexPerú">
+    <link rel="icon" href="img/favicon.ico">
+    <title>ComexResearch</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link href="css/cmxperu.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <style type="text/css">
+      /* Slidebar */
+      #sb-site,.sb-site-container,.sb-slidebar,body,html{margin:0;padding:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box} body,html{width:100%;overflow-x:hidden} html{height:100%} body{min-height:100%;height:auto;position:relative} html.sb-scroll-lock.sb-active:not(.sb-static){overflow:hidden}  #sb-site,.sb-site-container{width:100%;min-height:100vh;position:relative;z-index:1;background-color:#fff}  #sb-site:after,#sb-site:before,.sb-site-container:after,.sb-site-container:before{content:' ';display:table;clear:both}.sb-slidebar{height:100%;overflow-y:auto;position:fixed;top:0;z-index:0;display:none;background-color:#222}.sb-slidebar,.sb-slidebar *{-webkit-transform:translateZ(0px)}.sb-left{left:0}.sb-right{right:0}.sb-slidebar.sb-static,html.sb-static .sb-slidebar{position:absolute}.sb-slidebar.sb-active{display:block}.sb-style-overlay{z-index:9999}.sb-momentum-scrolling{-webkit-overflow-scrolling:touch}.sb-slidebar{width:30%}.sb-width-thin{width:15%}.sb-width-wide{width:45%} @media(max-width:480px){.sb-slidebar{width:70%}.sb-width-thin{width:55%}.sb-width-wide{width:85%}}  @media(min-width:481px){.sb-slidebar{width:55%}.sb-width-thin{width:40%}.sb-width-wide{width:70%}} @media(min-width:768px){.sb-slidebar{width:40%}.sb-width-thin{width:25%}.sb-width-wide{width:55%}} @media(min-width:992px){.sb-slidebar{width:30%}.sb-width-thin{width:15%}.sb-width-wide{width:45%}} @media(min-width:1200px){.sb-slidebar{width:20%}.sb-width-thin{width:5%}.sb-width-wide{width:35%}} #sb-site,.sb-site-container,.sb-slide,.sb-slidebar{-webkit-transition:-webkit-transform 400ms ease;-moz-transition:-moz-transform 400ms ease;-o-transition:-o-transform 400ms ease;transition:transform 400ms ease;-webkit-transition-property:-webkit-transform,left,right;-webkit-backface-visibility:hidden}.sb-hide{display:none}
+
+      /* Animate */
+      .animated{-webkit-animation-duration:1s;-moz-animation-duration:1s;-ms-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s}@-webkit-keyframes fadeIn{0%{opacity:0} 100%{opacity:1}}@-moz-keyframes fadeIn{0%{opacity:0} 100%{opacity:1}}@-o-keyframes fadeIn{0%{opacity:0} 100%{opacity:1}}@keyframes fadeIn{0%{opacity:0} 100%{opacity:1}}.fadeIn{-webkit-animation-name:fadeIn;-moz-animation-name:fadeIn;-o-animation-name:fadeIn;animation-name:fadeIn}@-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translateY(-20px)} 100%{opacity:1;-webkit-transform:translateY(0)}}@-moz-keyframes fadeInDown{0%{opacity:0;-moz-transform:translateY(-20px)} 100%{opacity:1;-moz-transform:translateY(0)}}@-o-keyframes fadeInDown{0%{opacity:0;-o-transform:translateY(-20px)} 100%{opacity:1;-o-transform:translateY(0)}}@keyframes fadeInDown{0%{opacity:0;transform:translateY(-20px)} 100%{opacity:1;transform:translateY(0)}}.fadeInDown{-webkit-animation-name:fadeInDown;-moz-animation-name:fadeInDown;-o-animation-name:fadeInDown;animation-name:fadeInDown}@-webkit-keyframes fadeOut{0%{opacity:1} 100%{opacity:0}}@-moz-keyframes fadeOut{0%{opacity:1} 100%{opacity:0}}@-o-keyframes fadeOut{0%{opacity:1} 100%{opacity:0}}@keyframes fadeOut{0%{opacity:1} 100%{opacity:0}}.fadeOut{-webkit-animation-name:fadeOut;-moz-animation-name:fadeOut;-o-animation-name:fadeOut;animation-name:fadeOut}
+
+      /* Hover icon wobble */
+      @-webkit-keyframes "icon-wobble"{16.65%{-webkit-transform:translateY(6px);transform:translateY(6px);}33.3%{-webkit-transform:translateY(-5px);transform:translateY(-5px);}49.95%{-webkit-transform:translateY(4px);transform:translateY(4px);}66.6%{-webkit-transform:translateY(-2px);transform:translateY(-2px);}83.25%{-webkit-transform:translateY(1px);transform:translateY(1px);}100%{-webkit-transform:translateY(0);transform:translateY(0);}}@keyframes "icon-wobble"{16.65%{-webkit-transform:translateY(6px);transform:translateY(6px);}33.3%{-webkit-transform:translateY(-5px);transform:translateY(-5px);}49.95%{-webkit-transform:translateY(4px);transform:translateY(4px);}66.6%{-webkit-transform:translateY(-2px);transform:translateY(-2px);}83.25%{-webkit-transform:translateY(1px);transform:translateY(1px);}100%{-webkit-transform:translateY(0);transform:translateY(0);}}.icon-wobble {display:inline-block;vertical-align:middle;-webkit-transform:translateZ(0);transform:translateZ(0);box-shadow:0 0 1px rgba(0, 0, 0, 0);-webkit-backface-visibility:hidden;backface-visibility:hidden;-moz-osx-font-smoothing:grayscale;position:relative;padding-right:1.5em;-webkit-transition-duration:0.3s;transition-duration:0.3s}.icon-wobble:before{margin-top:20px;font-size:14px;content:"\f103";position:absolute;right:0;padding:0 1px;font-family:CmxPeru;transition:all 0.5s ease}.head2 .icon-wobble:before{margin-top: 12px} @media (max-width: 991px) {.icon-wobble:before{margin-top: 12px}}.icon-wobble:hover:before,.icon-wobble:focus:before,.icon-wobble:active:before{-webkit-animation-name:icon-wobble;animation-name:icon-wobble;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;-webkit-animation-iteration-count:1;animation-iteration-count:1}.open .icon-wobble:before {transform:rotate(-180deg)}.open .icon-wobble:hover:before, .open .icon-wobble:focus:before, .open .icon-wobble:active:before {-webkit-animation-name:none;animation-name:none}
+    </style>
+    
+    <link href="css/style.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <header class="sb-slide navbar-fixed-top">
+      <div class="container">
+  
+        <div class="hidden-md hidden-lg movil">
+          <span class="i-response2 sb-toggle-left"></span>
+        </div>
+
+        <a href="http://www.comexperu.org.pe/" class="pull-left logo">
+          <img src="img/comex-research.png">
+        </a>
+        
+        <div class="pull-right hidden-sm hidden-xs">
+
+          <div class="menu">
+            <ul>
+              <li class="dropdown">
+                <a href="#" class="or i-export selected">Exportaciones</a>
+                <div class="dcont with-arrow">
+                  <ul>
+                    <li><a href="#">Perú</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Destinos</a></li>
+                    <li><a href="#">Empresas</a></li>
+                    <li><a href="#">Otras consultas</a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <li>
+                <a href="#" class="bl i-balance">Balanza Comercial</a>
+              </li>
+
+              <li class="dropdown">
+                <a href="#" class="ye i-import">Importaciones</a>
+                <div class="dcont with-arrow">
+                  <ul>
+                    <li><a href="#">Perú</a></li>
+                    <li><a href="#">Orígenes</a></li>
+                    <li><a href="#">Empresas</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Otras consultas</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </header>
+
+    <div id="sb-site">
+
+      <div class="container">
+
+        
+          <div class="row">
+            <div class="col-md-12">
+              <div class="content">
+
+                <div class="sub-menu">
+
+                    <div>
+                      <img src="img/icons/productos.png" alt="Perú" title="Perú">
+                    </div>
+                    
+                    <div><a href="#"><span class="selected">Evolución</span></a></div>
+                    <div class="hidden-xs"><a href="#"><span>Destinos</span></a></div>
+                    <div class="hidden-xs"><a href="#"><span>Empresas</span></a></div>
+
+                    <div class="hidden-sm hidden-md hidden-lg mov">
+                      
+                        <!-- img src="img/mov.jpg" class="dropdown-toggle" data-toggle="dropdown" -->
+                        <a href="#" class="i-response3 dropdown-toggle" data-toggle="dropdown"></a>
+
+                        <ul class="dropdown-menu with-arrow">
+                          <li><a href="#">Productos</a></li>
+                          <li><a href="#">Destinos</a></li>
+                          <li><a href="#">Empresas</a></li>
+                          <li><a href="#">Sectores</a></li>
+                        </ul>
+                      
+                    </div>
+                  
+                </div>
+
+                <div class="pgroup" id="accordion" aria-multiselectable="true">
+                  
+                  <div class="panel panel-default">
+                    <div class="panel-heading" id="head01">
+                      <h4 class="panel-title">
+                        <a class="i-down1 focus" data-toggle="collapse" data-parent="#accordion" href="#alemania">
+                          <i class="i-config"></i> Configuración
+                        </a>
+                      </h4>
+                    </div>
+
+                    <div id="alemania" class="panel-collapse collapse in">
+                      <div class="panel-body">
+                        <form>
+                          <div class="row">
+                            <div class="col-md-3 mb25">
+                              <p>Periodo</p>
+                              <ul class="list-inline">
+                                <li>
+                                  <div class="radio info"><input type="radio" checked="" id="radio-10"><label for="radio-10">Anual</label></div>
+                                </li>
+                                <li>
+                                  <div class="radio info"><input type="radio" id="radio-11"><label for="radio-11">Mensual</label></div>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="col-md-3 mb25">
+                              <p>Desde</p>
+                              <ul class="list-inline2">
+                                <li class="form-group">
+                                  <select class="form-control">
+                                    <option value="">Mes</option>
+                                    <option value="1">Enero</option>
+                                    <option value="2">Febrero</option>
+                                    <option value="3">Marzo</option>
+                                  </select>
+                                </li>
+                                <li class="form-group">
+                                  <select class="form-control">
+                                    <option value="">Año</option>
+                                    <option value="1">2017</option>
+                                    <option value="2">2016</option>
+                                    <option value="3">2015</option>
+                                  </select>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="col-md-3 mb25">
+                              <p>Hasta</p>
+                              <ul class="list-inline2">
+                                <li class="form-group">
+                                  <select class="form-control">
+                                    <option value="">Mes</option>
+                                    <option value="1">Enero</option>
+                                    <option value="2">Febrero</option>
+                                    <option value="3">Marzo</option>
+                                  </select>
+                                </li>
+                                <li class="form-group">
+                                  <select class="form-control">
+                                    <option value="">Año</option>
+                                    <option value="1">2017</option>
+                                    <option value="2">2016</option>
+                                    <option value="3">2015</option>
+                                  </select>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="col-md-3 mb25">
+                              <p>Tipo de información</p>
+                              <ul class="list-inline">
+                                <li>
+                                  <div class="radio info"><input type="radio" id="radio-12"><label for="radio-12">Dólares</label></div>
+                                </li>
+                                <li>
+                                  <div class="radio info"><input type="radio" id="radio-13"><label for="radio-13">Peso</label></div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="row mb25">
+                            <div class="col-md-12">
+                              <p>Valores expresados</p>
+                              <ul class="list-inline">
+                                <li>
+                                  <div class="radio info"><input type="radio" checked="" id="radio-1"><label for="radio-1">Millones US$</label></div>
+                                </li>
+                                <li>
+                                  <div class="radio info"><input type="radio" id="radio-2"><label for="radio-2">Miles US$</label></div>
+                                </li>
+                                <li>
+                                  <div class="radio info"><input type="radio" id="radio-3"><label for="radio-3">US$</label></div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="row butts">
+                            <div class="col-md-12">
+                              <ul class="butts">
+                                <li>
+                                  <button class="btn btn-info i-chart1">Comparativo</button>
+                                </li>
+                                <li>
+                                  <button class="btn btn-info i-time1">Serie de Tiempo</button>
+                                </li>
+                                <li>
+                                  <button class="btn btn-info2 i-excel">Exportar a Excel</button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+          
+              </div>
+            </div>
+          </div>
+        
+
+      </div>
+  
+      <footer>
+        <div class="container">
+          <div class="row">
+
+            <div class="col-sm-6">
+              <div class="copyright">
+                COMEXPERU | 2017 © Todos los derechos reservados
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <ul class="social" >
+                <li>Síguenos en:</li>
+                <li><a class="i-facebook2" href="https://www.facebook.com/comexperu/" target="_blank"><span class="hidden-xs hidden-sm">/ComexPeru</span></a></li>
+                <li><a class="i-twitter2" href="https://twitter.com/comexperu/" target="_blank"><span class="hidden-xs hidden-sm">/ComexPeru</span></a></li>
+                <li><a class="i-youtube2" href="https://www.youtube.com/user/comexperutv/" target="_blank"><span class="hidden-xs hidden-sm">/ComexPeruTV</span></a></li>
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+      </footer>
+
+      <!-- ScrollUp button start -->
+      <div class="scrollup">
+        <a href="#"><span class="i-up"></span></a>
+      </div>
+      <!-- ScrollUp button end -->
+    </div>
+    
+    
+    <!-- start menu movil -->
+    <nav class="sb-slidebar sb-left">
+        <ul class="sb-menu">
+            <li>
+              <a href="home.html">
+                <span class="i-home"></span>
+                Inicio
+                <span class="arrow i-right"></span>
+              </a>
+            </li>
+            <li><a href="#">Balanza Comercial<span class="arrow i-right"></span></a></li>
+            
+            <li>
+              <a href="#">Exportaciones<span class="arrow i-right"></span></a>
+            </li>
+
+            <li>
+              <a href="#">Importaciones<span class="arrow i-right"></span></a>
+            </li>
+            
+        </ul>
+    </nav>
+    <!-- end menu movil -->
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/slidebar.min.js"></script>
+
+    <script src="js/app.min.js"></script>
+    <!-- script src="js/ie10-viewport-bug-workaround.js"></script-->
+  </body>
+</html>
